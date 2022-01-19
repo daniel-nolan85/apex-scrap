@@ -15,7 +15,7 @@ const ScrapVehicleSection = () => {
     e.preventDefault();
     setLoading(true);
     axios
-      .post('http://localhost:8000/api/get-car-info', { reg })
+      .post('https://apex-scrap.herokuapp.com/api/get-car-info', { reg })
       .then((res) => {
         setLoading(false);
         console.log(res.data);

@@ -38,7 +38,10 @@ const ContactForm = () => {
         setLoading(true);
         console.log(values);
         axios
-          .post('http://localhost:8000/api/contact-form-email', values)
+          .post(
+            'https://apex-scrap.herokuapp.com/api/contact-form-email',
+            values
+          )
           .then((res) => {
             setLoading(false);
             toast.success('Your message has been sent!');
