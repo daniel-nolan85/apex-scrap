@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+  --yellow: #f9d806;
+  --light-yellow: #ffee80;
+  --black: #130f40;
+  --light-color: #666;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 4.5rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+
+.heading span {
+  position: relative;
+  z-index: 0;
+}
+
+.heading span::before {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--yellow);
+  clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background: var(--light-yellow);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 9%;
+}
+
+.btn:hover {
+  background: var(--yellow);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.header .logo span {
+  color: var(--yellow);
+}
+
+.header nav.navbar {
+  box-shadow: none !important;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  margin: 0 2rem;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.header .navbar a:hover {
+  color: var(--yellow);
+}
+
+.header .btn {
+  margin-top: 0;
+}
+
+.header #login-btn .i {
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+}
+
+.header.active {
+  box-shadow: var(--box-shadow);
+  padding: 2rem 9%;
+}
+
+.login-form-container {
+  position: fixed;
+  top: -105%;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.login-form-container.active {
+  top: 0;
+  opacity: 1;
+}
+
+.login-form-container form {
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  background: #fff;
+  border: var(--border);
+  text-align: center;
+  width: 40rem;
+}
+
+.login-form-container form .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-form-container form .btn {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.login-form-container form h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.login-form-container form .box {
+  margin: 0.7rem 0;
+  width: 100%;
+  text-transform: none;
+  color: (--black);
+  font-size: 1.6rem;
+  padding: 1rem 1.2rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+}
+
+.login-form-container form p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+
+.login-form-container form p a {
+  color: var(--yellow);
+  text-transform: underline;
+}
+
+.login-form-container #close-login-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.home {
+  padding-top: 10rem;
+  text-align: center;
+  overflow-x: hidden;
+  background: url(images/home-img.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.home h1 {
+  font-size: 7.5rem;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin: 8rem 0;
+}
+
+.icons-container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  background: #eee;
+}
+
+.icons-container .icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+}
+
+.icons-container .icons .i {
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background: #eee;
+  color: var(--black);
+  text-align: center;
+}
+
+.icons-container .icons .content h3 {
+  color: var(--yellow);
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  margin: 0;
+}
+
+.icons-container .icons .content p {
+  color: var(--light-color);
+  font-size: 1.5rem;
+}
+
+.icons-container .icons:hover {
+  background: var(--black);
+}
+
+.icons-container .icons:hover .i {
+  background: var(--yellow);
+}
+
+.icons-container .icons:hover .content h3 {
+  color: #fff;
+}
+
+.icons-container .icons:hover .content p {
+  color: #eee;
+}
+
+.scrap {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.scrap h3 {
+  color: var(--black);
+  font-size: 3rem;
+}
+
+.scrap p {
+  color: var(--light-color);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.scrap form {
+  margin: 1rem auto;
+  max-width: 60rem;
+  height: 5rem;
+  display: flex;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  border-radius: 5rem;
+}
+
+.scrap form input[type='text'] {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: uppercase;
+  padding: 0 2rem;
+}
+
+.scrap form input[type='text']::placeholder {
+  text-transform: none;
+  font-size: 1.5rem;
+}
+
+.scrap form a[type='submit'] {
+  height: 100%;
+  width: 17rem;
+  font-size: 1.7rem;
+  color: var(--black);
+  background: var(--light-yellow);
+  cursor: pointer;
+  padding-top: 1.2rem;
+}
+
+.scrap form a[type='submit']:hover {
+  background: var(--yellow);
+}
+
+.spinner {
+  font-size: 20px;
+  margin-top: 0.4rem;
+  color: #150631;
+  animation: spin infinite 3s linear;
+}
+
+.scrap .scrap-results {
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  width: 50%;
+  margin: 5rem auto 0 auto;
+  padding: 2rem;
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.scrap .scrap-results .scrap-result {
+  color: var(--yellow);
+}
+
+.scrap .scrap-results .price {
+  font-size: 5rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reviews {
+  background: #eee;
+}
+
+.reviews .reviews-slider {
+  padding-bottom: 3rem;
+}
+
+.reviews .reviews-slider .box {
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  opacity: 0.4;
+  transform: scale(0.9);
+}
+
+.reviews .reviews-slider .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+}
+
+.reviews .reviews-slider .box img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.reviews .reviews-slider .box .content p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+
+.reviews .reviews-slider .box .content h3 {
+  font-size: 2.2rem;
+  color: var(--black);
+  padding-bottom: 0.5rem;
+}
+
+.reviews .reviews-slider .box .content .stars .i {
+  font-size: 1.7rem;
+  color: var(--yellow);
+}
+
+.reviews .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--yellow);
+}
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact .row .map {
+  flex: 1 1 42rem;
+  width: 100%;
+  padding: 2rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.contact .form {
+  flex: 1 1 42rem;
+  padding: 2rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.contact .form h3 {
+  font-size: 4rem;
+  color: var(--black);
+}
+
+.contact .form input::placeholder,
+.contact .form textarea::placeholder {
+  font-size: 1.5rem;
+}
+
+.contact .form .box {
+  margin: 0.7rem 0;
+  width: 100%;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: none;
+  border-radius: 0.5rem;
+}
+
+.contact .form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+.contact .form .btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact .form .btn {
+  width: 12rem;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+}
+
+.is-invalid {
+  border: 0.1rem solid red !important;
+}
+
+.footer {
+  background: var(--light-yellow);
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  padding: 1rem 0;
+  color: var(--black);
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.footer .box-container .box a .i {
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  color: var(--black);
+  height: 2rem;
+  width: 2rem;
+}
+
+.footer .box-container .box a:hover .i {
+  margin-right: 1.5rem;
+}
+
+.footer .credit {
+  text-align: center;
+  padding: 1.5rem;
+  padding-top: 2.5rem;
+  margin-top: 2rem;
+  border-top: var(--border);
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.Toastify {
+  font-size: x-large;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+
+  #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header #login-btn .i {
+    display: block;
+  }
+
+  .header #login-btn .btn {
+    display: none;
+  }
+
+  .header .navbar {
+    flex-direction: column;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+
+  .scrap .scrap-results {
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+}
