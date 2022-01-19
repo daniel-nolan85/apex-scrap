@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import baseUrl from '../../utils/baseUrl';
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
@@ -36,18 +37,17 @@ const ContactForm = () => {
       validationSchema={validate}
       onSubmit={(values) => {
         setLoading(true);
-        console.log(values);
         axios
-          .post(
-            'https://apex-scrap.herokuapp.com/api/contact-form-email',
-            values
-          )
+          .post(baseUrl + '/contact-form-email', values)
           .then((res) => {
             setLoading(false);
             toast.success('Your message has been sent!');
             document.getElementById('contact-form').reset();
           })
-          .catch();
+          .catch((err) => {
+            setLoading(false);
+            console.log(err);
+          });
       }}
     >
       {(formik) => (

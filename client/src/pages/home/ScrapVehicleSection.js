@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import baseUrl from '../../utils/baseUrl';
 
 const ScrapVehicleSection = () => {
   const [reg, setReg] = useState('');
@@ -15,10 +16,9 @@ const ScrapVehicleSection = () => {
     e.preventDefault();
     setLoading(true);
     axios
-      .post('https://apex-scrap.herokuapp.com/api/get-car-info', { reg })
+      .post(baseUrl + '/get-car-info', { reg })
       .then((res) => {
         setLoading(false);
-        console.log(res.data);
         setMake(res.data.make);
         setColour(res.data.colour);
         setYear(res.data.yearOfManufacture);
