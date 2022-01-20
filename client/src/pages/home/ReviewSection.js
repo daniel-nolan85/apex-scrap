@@ -18,7 +18,7 @@ const ReviewSection = () => {
     <>
       <section className='reviews' id='reviews'>
         <h1 className='heading'>
-          Client's <span>Reviews</span>
+          Client <span>Reviews</span>
         </h1>
         <Swiper
           spaceBetween={20}
