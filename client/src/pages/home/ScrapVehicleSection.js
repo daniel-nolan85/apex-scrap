@@ -45,7 +45,7 @@ const ScrapVehicleSection = () => {
         Simply enter a UK based registration number to get a quote on your
         vehicle in seconds!
       </p>
-      <form action=''>
+      <form>
         <input
           type='text'
           placeholder='Vehicle reg number...'

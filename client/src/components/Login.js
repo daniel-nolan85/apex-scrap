@@ -14,7 +14,7 @@ const Login = () => {
         onClick={() => setShowLogin(false)}
       />
 
-      <form action>
+      <form>
         <h3>User Login</h3>
         <input type='email' placeholder='Email' className='box' />
         <input type='password' placeholder='Password' className='box' />

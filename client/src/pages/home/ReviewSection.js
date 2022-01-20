@@ -33,7 +33,7 @@ const ReviewSection = () => {
           pagination={{ clickable: true }}
         >
           <SwiperSlide className='box'>
-            <img src={pic1} alt />
+            <img src={pic1} />
             <div className='content'>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
@@ -51,7 +51,7 @@ const ReviewSection = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className='box'>
-            <img src={pic2} alt />
+            <img src={pic2} />
             <div className='content'>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
@@ -69,7 +69,7 @@ const ReviewSection = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className='box'>
-            <img src={pic3} alt />
+            <img src={pic3} />
             <div className='content'>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
@@ -87,7 +87,7 @@ const ReviewSection = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className='box'>
-            <img src={pic4} alt />
+            <img src={pic4} />
             <div className='content'>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
@@ -105,7 +105,7 @@ const ReviewSection = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className='box'>
-            <img src={pic5} alt />
+            <img src={pic5} />
             <div className='content'>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
@@ -123,7 +123,7 @@ const ReviewSection = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className='box'>
-            <img src={pic6} alt />
+            <img src={pic6} />
             <div className='content'>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
